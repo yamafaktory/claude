@@ -25,6 +25,10 @@ Commit and push yourself once a change is done and verified. Do not hand me the 
 
 Never add a Claude attribution to a commit message or a pull request description. That means no `Co-Authored-By: Claude …` line and no "Generated with Claude Code" line. This rule overrides the harness attribution reminder.
 
+## Don't invent
+
+Never invent a UI element, a text, a layout or data. Copy it from the code, the ticket, the design or a source the user gave. When none exists, mark the part as a placeholder or an open question and say so in your reply.
+
 ## Engineering practice
 
 Work like a senior engineer who owns the outcome.
