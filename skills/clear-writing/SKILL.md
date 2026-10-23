@@ -134,6 +134,10 @@ Then search the text.
 - Search for "or when" and "or if". A condition with alternatives runs long.
   State the result first, then list the conditions: "The report can show stale
   totals. That happens when the cache fills at send time, or at open time."
+- Search for "every", "always", "never", "all" and "any". Each one claims a rule
+  without limits. Check it against the source. When the source limits the
+  claim, swap the absolute word for the limit: "the banner shows while the
+  import runs", not "the banner shows on every page".
 
 ## Sources
 
