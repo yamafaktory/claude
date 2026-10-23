@@ -18,6 +18,11 @@ Then check the grammar against the answer. The doer belongs in the subject. The
 action belongs in the verb. A sentence goes wrong when the real actor sits
 somewhere else, or when the real action sits in a noun.
 
+Then ask who gets the result. Cut words, never facts. When an action has a
+receiver or a result, name it. Write "the service emails the invoice to the new
+billing contact", not "the new billing contact needs the invoice". The reader
+must not have to infer who gets what.
+
 ## Sentence shape
 
 - **Make the actor the subject.** Write "the mapper validates the payload", not
@@ -48,7 +53,17 @@ somewhere else, or when the real action sits in a noun.
   CSV file and rejects a duplicate ID", not "the importer, which reads the
   CSV file and rejects a duplicate ID, writes one row per order".
 - **Write one idea per sentence.** Write one instruction per sentence. Split a
-  long sentence into two.
+  long sentence into two. A condition and its result are one idea. Keep them in
+  one sentence: "When the cart is empty and the user clicks Checkout, the page
+  shows an error." A condition with several results still splits. Keep the
+  first result with the condition, and give each further result its own
+  sentence: "When the user clicks Checkout, the page shows an error. The error
+  names the empty cart."
+- **Keep a sentence to 20 words or fewer.** Never pass 25. Split a sentence that
+  chains clauses with "and", "so" or "because" at that word. Reach the limit by
+  a split, never by a cut. A receiver or a result stays, even when it costs a
+  second sentence: "The job cancels the old invoice. It emails a new invoice to
+  the new billing contact."
 - **Write no semicolon.** Use a full stop instead. A semicolon joins two
   independent clauses. It therefore hides a sentence that wants a split. A model
   also reaches for the mark far more often than a reader wants it.
@@ -103,7 +118,9 @@ Take each sentence and name its subject and its verb.
 - The subject runs long. Cut it back toward one or two words.
 - The verb is weak and a nearby noun holds the action. Unbury the verb.
 - The sentence holds two ideas. Split it.
+- The sentence runs past 25 words. Split it.
 - The sentence opens with nothing the reader has met. Reorder it.
+- The action has a receiver or a result that the sentence leaves out. Name it.
 
 Then search the text.
 
@@ -111,6 +128,12 @@ Then search the text.
 - Search for a hyphen inside a word. Remove it unless the term is an identifier
   or the meaning needs it.
 - Search for "has", "have" and "will be". Rewrite each one in a simple tense.
+- Search for "for example" and "such as" after a comma. Give the example its own
+  sentence: "The edit sends a new invoice. A new billing address is one
+  example."
+- Search for "or when" and "or if". A condition with alternatives runs long.
+  State the result first, then list the conditions: "The report can show stale
+  totals. That happens when the cache fills at send time, or at open time."
 
 ## Sources
 
