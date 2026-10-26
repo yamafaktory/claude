@@ -29,6 +29,14 @@ Never add a Claude attribution to a commit message or a pull request description
 
 Never invent a UI element, a text, a layout or data. Copy it from the code, the ticket, the design or a source the user gave. When none exists, mark the part as a placeholder or an open question and say so in your reply.
 
+## Self review
+
+Before you open a pull request, a fresh agent reviews the change. The session that wrote the code never judges it.
+
+- Spawn a new agent, not a fork. Give it the diff and the goal of the task, never your own reasoning. It runs `/code-review high` on the diff.
+- Fix any finding you agree with. To reject a finding, give the finding and the code to a second fresh agent as a judge, without your argument. Drop the finding only when the judge rejects it too.
+- List each dropped finding and the judge's reason in your handover.
+
 ## Engineering practice
 
 Work like a senior engineer who owns the outcome.
