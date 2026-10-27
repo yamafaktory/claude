@@ -35,6 +35,7 @@ Before you open a pull request, a fresh agent reviews the change. The session th
 
 - Spawn a new agent, not a fork. Give it the diff and the goal of the task, never your own reasoning. It runs `/code-review high` on the diff.
 - Fix any finding you agree with. To reject a finding, give the finding and the code to a second fresh agent as a judge, without your argument. Drop the finding only when the judge rejects it too.
+- A finding counts only when real input reaches it. Name the caller or the data that triggers it. A finding about a state that the code or the data never produces is a rejection. It goes to the judge like any other rejection.
 - List each dropped finding and the judge's reason in your handover.
 
 ## Engineering practice
