@@ -33,9 +33,11 @@ Never invent a UI element, a text, a layout or data. Copy it from the code, the 
 
 Before you open a pull request, a fresh agent reviews the change. The session that wrote the code never judges it.
 
-- Spawn a new agent, not a fork. Give it the diff and the goal of the task, never your own reasoning. It runs `/code-review high` on the diff.
+- Spawn a new agent, not a fork. Give it the diff and the goal of the task, never your own reasoning. It runs `/code-review high` and `/simplify` in report-only mode on the diff. It reads the code around the diff: callers, sibling components and the conventions of the package.
+- It asks two more questions. Can the logic be tested without rendering? Does each new asset come from the same source as its siblings?
 - Fix any finding you agree with. To reject a finding, give the finding and the code to a second fresh agent as a judge, without your argument. Drop the finding only when the judge rejects it too.
-- A finding counts only when real input reaches it. Name the caller or the data that triggers it. A finding about a state that the code or the data never produces is a rejection. It goes to the judge like any other rejection.
+- A bug finding counts only when real input reaches it. Name the caller or the data that triggers it. A bug finding about a state that the code or the data never produces is a rejection. It goes to the judge like any other rejection.
+- A design finding counts when it removes a moving part and the behavior stays. A moving part is a branch, a special case, a prop, a duplicate, a file or a parallel representation.
 - List each dropped finding and the judge's reason in your handover.
 
 ## Engineering practice
